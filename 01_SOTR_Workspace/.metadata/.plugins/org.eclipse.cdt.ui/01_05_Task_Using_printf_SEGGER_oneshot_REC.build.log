@@ -1,0 +1,10 @@
+10:59:52 **** Incremental Build of configuration Debug for project 01_05_Task_Using_printf_SEGGER_oneshot_REC ****
+make -j12 all 
+arm-none-eabi-size  01_05_Task_Using_printf_SEGGER_oneshot_REC.elf 
+   text	   data	    bss	    dec	    hex	filename
+  30676	    100	  84956	 115732	  1c414	01_05_Task_Using_printf_SEGGER_oneshot_REC.elf
+Finished building: default.size.stdout
+ 
+
+10:59:53 Build Finished. 0 errors, 0 warnings. (took 324ms)
+

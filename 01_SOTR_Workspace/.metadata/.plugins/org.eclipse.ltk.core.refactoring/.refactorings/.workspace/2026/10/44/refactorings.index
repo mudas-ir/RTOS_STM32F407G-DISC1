@@ -1,0 +1,6 @@
+1793167080753	Rename resource '01_04_Task_LED_Blinking'
+1793167119405	Rename resource '01_05_Task_Using_printf_SEGGER_oneshot_REC'
+1793167137551	Rename resource '01_06_Task_Using_printf_SEGGER_realtime_REC'
+1793167269657	Delete resource '02_01_Task_LED_Blinking/01_04_Task_LED_Blinking.launch'
+1793167282164	Delete resource '01_05_Task_Using_printf_SEGGER_realtime_REC/01_06_Task_Using_printf_SEGGER_realtime_REC.launch'
+1793167290961	Delete resource '01_04_Task_Using_printf_SEGGER_oneshot_REC/01_05_Task_Using_printf_SEGGER_oneshot_REC.launch'

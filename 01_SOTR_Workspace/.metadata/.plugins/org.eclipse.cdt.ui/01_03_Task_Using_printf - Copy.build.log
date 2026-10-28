@@ -1,4 +1,4 @@
-18:58:09 **** Clean-only build of configuration Debug for project 01_03_Task_Using_printf - Copy ****
+10:09:00 **** Clean-only build of configuration Debug for project 01_03_Task_Using_printf - Copy ****
 make -j12 clean 
 rm -rf ./Third_Party/FreeRTOS/portable/MemMang/heap_4.cyclo ./Third_Party/FreeRTOS/portable/MemMang/heap_4.d ./Third_Party/FreeRTOS/portable/MemMang/heap_4.o ./Third_Party/FreeRTOS/portable/MemMang/heap_4.su
 rm -rf ./Third_Party/FreeRTOS/portable/GCC/ARM_CM4F/port.cyclo ./Third_Party/FreeRTOS/portable/GCC/ARM_CM4F/port.d ./Third_Party/FreeRTOS/portable/GCC/ARM_CM4F/port.o ./Third_Party/FreeRTOS/portable/GCC/ARM_CM4F/port.su
@@ -9,5 +9,5 @@ rm -rf ./Core/Src/main.cyclo ./Core/Src/main.d ./Core/Src/main.o ./Core/Src/main
 rm -rf 01_03_Task_Using_printf.elf 01_03_Task_Using_printf.list 01_03_Task_Using_printf.map default.size.stdout
  
 
-18:58:09 Build Finished. 0 errors, 0 warnings. (took 348ms)
+10:09:01 Build Finished. 0 errors, 0 warnings. (took 326ms)
 

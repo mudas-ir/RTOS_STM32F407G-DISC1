@@ -1,8 +1,10 @@
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
-configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:01_04_Task_LED_Blinking
+configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:01_01_Task,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:01_03_Task_Using_printf,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:02_01_Task_LED_Blinking
 eclipse.preferences.version=1
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:01_01_Task/activeLaunchMode=run
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:01_01_Task/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:01_03_Task_Using_printf/activeLaunchMode=debug
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:01_03_Task_Using_printf/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:01_04_Task_LED_Blinking/activeLaunchMode=debug
