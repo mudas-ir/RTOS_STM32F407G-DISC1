@@ -1,0 +1,10 @@
+15:53:51 **** Incremental Build of configuration Debug for project 03_01_Task_LED_vTaskDelay ****
+make -j12 all 
+arm-none-eabi-size  03_01_Task_LED_vTaskDelay.elf 
+   text	   data	    bss	    dec	    hex	filename
+  28336	     28	 129684	 158048	  26960	03_01_Task_LED_vTaskDelay.elf
+Finished building: default.size.stdout
+ 
+
+15:53:51 Build Finished. 0 errors, 0 warnings. (took 486ms)
+

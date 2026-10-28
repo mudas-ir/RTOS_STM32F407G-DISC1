@@ -1,4 +1,4 @@
-12:29:31 **** Incremental Build of configuration Debug for project 01_03_Task_Using_printf ****
+15:19:07 **** Build of configuration Debug for project 01_03_Task_Using_printf ****
 make -j12 all 
 arm-none-eabi-size  01_03_Task_Using_printf.elf 
    text	   data	    bss	    dec	    hex	filename
@@ -6,5 +6,5 @@ arm-none-eabi-size  01_03_Task_Using_printf.elf
 Finished building: default.size.stdout
  
 
-12:29:31 Build Finished. 0 errors, 0 warnings. (took 429ms)
+15:19:08 Build Finished. 0 errors, 0 warnings. (took 479ms)
 
