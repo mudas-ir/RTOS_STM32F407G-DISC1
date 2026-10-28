@@ -2,7 +2,7 @@
 ../Core/Src/main.c:144:6:SystemClock_Config	3
 ../Core/Src/main.c:191:13:MX_GPIO_Init	1
 ../Core/Src/main.c:329:13:task1_handler	1
-../Core/Src/main.c:338:13:task2_handler	1
-../Core/Src/main.c:347:13:task3_handler	1
-../Core/Src/main.c:365:6:HAL_TIM_PeriodElapsedCallback	2
-../Core/Src/main.c:382:6:Error_Handler	1
+../Core/Src/main.c:339:13:task2_handler	1
+../Core/Src/main.c:349:13:task3_handler	1
+../Core/Src/main.c:368:6:HAL_TIM_PeriodElapsedCallback	2
+../Core/Src/main.c:385:6:Error_Handler	1

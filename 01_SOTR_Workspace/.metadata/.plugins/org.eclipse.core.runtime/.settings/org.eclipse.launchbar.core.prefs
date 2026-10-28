@@ -1,7 +1,7 @@
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
-configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:01_01_Task,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:01_03_Task_Using_printf,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:02_01_Task_LED_Blinking,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:01_05_Task_Using_printf_SEGGER_realtime_REC,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:03_01_Task_LED_vTaskDelay
+configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:01_01_Task,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:01_03_Task_Using_printf,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:02_01_Task_LED_Blinking,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:03_01_Task_LED_vTaskDelay,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:01_05_Task_Using_printf_SEGGER_realtime_REC
 eclipse.preferences.version=1
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:01_01_Task/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:01_01_Task/activeLaunchTarget=null\:---
@@ -11,4 +11,4 @@ org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:01_04_Task_LED_Blinking/activeL
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:01_05_Task_Using_printf_SEGGER_realtime_REC/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:02_01_Task_LED_Blinking/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:03_01_Task_LED_vTaskDelay\ (1)/activeLaunchMode=debug
-org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:03_01_Task_LED_vTaskDelay/activeLaunchMode=run
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:03_01_Task_LED_vTaskDelay/activeLaunchMode=debug

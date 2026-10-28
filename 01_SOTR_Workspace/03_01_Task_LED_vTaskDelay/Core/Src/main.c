@@ -101,7 +101,7 @@ int main(void)
   //Enable the CYCCNT counter.
    DWT_CTRL |= ( 1 << 0);
 
-   SEGGER_UART_init(500000);
+   SEGGER_UART_init(250000);
 
    SEGGER_SYSVIEW_Conf();
 
@@ -330,6 +330,7 @@ static void task1_handler(void* parameters)
 {
 	while(1)
 	{
+		SEGGER_SYSVIEW_PrintfTarget("Toggle Green LED");
 		HAL_GPIO_TogglePin(GPIOD, LED_GREEN_PIN);
 		vTaskDelay(pdMS_TO_TICKS(1000));
 	}
@@ -339,6 +340,7 @@ static void task2_handler(void* parameters)
 {
 	while(1)
 	{
+		SEGGER_SYSVIEW_PrintfTarget("Toggle Orange LED");
 		HAL_GPIO_TogglePin(GPIOD, LED_ORANGE_PIN);
 		vTaskDelay(pdMS_TO_TICKS(800));
 	}
@@ -348,6 +350,7 @@ static void task3_handler(void* parameters)
 {
 	while(1)
 	{
+		SEGGER_SYSVIEW_PrintfTarget("Toggle Red LED");
 		HAL_GPIO_TogglePin(GPIOD, LED_RED_PIN);
 		vTaskDelay(pdMS_TO_TICKS(400));
 	}

@@ -1,4 +1,4 @@
-15:52:56 **** Incremental Build of configuration Debug for project 01_05_Task_Using_printf_SEGGER_realtime_REC ****
+17:43:59 **** Incremental Build of configuration Debug for project 01_05_Task_Using_printf_SEGGER_realtime_REC ****
 make -j12 all 
 arm-none-eabi-size  01_05_Task_Using_printf_SEGGER_realtime_REC.elf 
    text	   data	    bss	    dec	    hex	filename
@@ -6,5 +6,5 @@ arm-none-eabi-size  01_05_Task_Using_printf_SEGGER_realtime_REC.elf
 Finished building: default.size.stdout
  
 
-15:52:56 Build Finished. 0 errors, 0 warnings. (took 508ms)
+17:43:59 Build Finished. 0 errors, 0 warnings. (took 565ms)
 
