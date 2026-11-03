@@ -1,0 +1,9 @@
+17:27:47 **** Incremental Build of configuration Debug for project 05_03_LED_Task_Notify_&_Suspend ****
+make -j12 all 
+arm-none-eabi-size  05_03_LED_Task_Notify_&_Suspend.elf 
+c:/st/stm32cubeide_1.17.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.make.win32_2.2.0.202409170845/tools/bin/sh: _Suspend.elf: not found
+make: *** [makefile:77: default.size.stdout] Error 127
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+
+17:27:47 Build Failed. 1 errors, 0 warnings. (took 367ms)
+
