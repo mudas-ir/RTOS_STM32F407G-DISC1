@@ -557,7 +557,7 @@ int main(void)
  800056c:	f043 0301 	orr.w	r3, r3, #1
  8000570:	6013      	str	r3, [r2, #0]
 
-   SEGGER_UART_init(250000);
+   SEGGER_UART_init(500000);
  8000572:	482d      	ldr	r0, [pc, #180]	@ (8000628 <main+0xd4>)
  8000574:	f004 fd52 	bl	800501c <SEGGER_UART_init>
 
@@ -669,7 +669,7 @@ int main(void)
  8000620:	bf00      	nop
  8000622:	e7fd      	b.n	8000620 <main+0xcc>
  8000624:	e0001000 	.word	0xe0001000
- 8000628:	0003d090 	.word	0x0003d090
+ 8000628:	0007a120 	.word	0x0007a120
  800062c:	08007580 	.word	0x08007580
  8000630:	08007594 	.word	0x08007594
  8000634:	080009e1 	.word	0x080009e1
