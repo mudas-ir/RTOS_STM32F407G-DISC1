@@ -1,4 +1,4 @@
-17:54:44 **** Build of configuration Debug for project 05_03_LED_Task_Notify_and_Suspend ****
+17:40:05 **** Build of configuration Debug for project 05_03_LED_Task_Notify_and_Suspend ****
 make -j12 all 
 arm-none-eabi-gcc "../Third_Party/SEGGER/SEGGER/Syscalls/SEGGER_RTT_Syscalls_GCC.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I"C:/Mudassir/SOTR/01_SOTR_Workspace/05_03_LED_Task_Notify_and_Suspend/Third_Party/SEGGER/Config" -I"C:/Mudassir/SOTR/01_SOTR_Workspace/05_03_LED_Task_Notify_and_Suspend/Third_Party/SEGGER/OS" -I"C:/Mudassir/SOTR/01_SOTR_Workspace/05_03_LED_Task_Notify_and_Suspend/Third_Party/SEGGER/SEGGER" -I"C:/Mudassir/SOTR/01_SOTR_Workspace/05_03_LED_Task_Notify_and_Suspend/Third_Party/FreeRTOS" -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Mudassir/SOTR/01_SOTR_Workspace/05_03_LED_Task_Notify_and_Suspend/Third_Party/FreeRTOS/include" -I"C:/Mudassir/SOTR/01_SOTR_Workspace/05_03_LED_Task_Notify_and_Suspend/Third_Party/FreeRTOS/portable/GCC/ARM_CM4F" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Third_Party/SEGGER/SEGGER/Syscalls/SEGGER_RTT_Syscalls_GCC.d" -MT"Third_Party/SEGGER/SEGGER/Syscalls/SEGGER_RTT_Syscalls_GCC.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Third_Party/SEGGER/SEGGER/Syscalls/SEGGER_RTT_Syscalls_GCC.o"
 arm-none-eabi-gcc "../Third_Party/SEGGER/SEGGER/SEGGER_RTT.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I"C:/Mudassir/SOTR/01_SOTR_Workspace/05_03_LED_Task_Notify_and_Suspend/Third_Party/SEGGER/Config" -I"C:/Mudassir/SOTR/01_SOTR_Workspace/05_03_LED_Task_Notify_and_Suspend/Third_Party/SEGGER/OS" -I"C:/Mudassir/SOTR/01_SOTR_Workspace/05_03_LED_Task_Notify_and_Suspend/Third_Party/SEGGER/SEGGER" -I"C:/Mudassir/SOTR/01_SOTR_Workspace/05_03_LED_Task_Notify_and_Suspend/Third_Party/FreeRTOS" -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Mudassir/SOTR/01_SOTR_Workspace/05_03_LED_Task_Notify_and_Suspend/Third_Party/FreeRTOS/include" -I"C:/Mudassir/SOTR/01_SOTR_Workspace/05_03_LED_Task_Notify_and_Suspend/Third_Party/FreeRTOS/portable/GCC/ARM_CM4F" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Third_Party/SEGGER/SEGGER/SEGGER_RTT.d" -MT"Third_Party/SEGGER/SEGGER/SEGGER_RTT.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Third_Party/SEGGER/SEGGER/SEGGER_RTT.o"
@@ -50,7 +50,14 @@ Finished building: default.size.stdout
  
 Finished building: 05_03_LED_Task_Notify_and_Suspend.list
  
-17:54:51 **** Incremental Build of configuration Debug for project 05_03_LED_Task_Notify_and_Suspend ****
+17:40:11 **** Incremental Build of configuration Debug for project 05_03_LED_Task_Notify_and_Suspend ****
+make -j12 all 
+arm-none-eabi-size  05_03_LED_Task_Notify_and_Suspend.elf 
+   text	   data	    bss	    dec	    hex	filename
+  32652	     28	 129708	 162388	  27a54	05_03_LED_Task_Notify_and_Suspend.elf
+Finished building: default.size.stdout
+ 
+17:40:14 **** Incremental Build of configuration Debug for project 05_03_LED_Task_Notify_and_Suspend ****
 make -j12 all 
 arm-none-eabi-size  05_03_LED_Task_Notify_and_Suspend.elf 
    text	   data	    bss	    dec	    hex	filename

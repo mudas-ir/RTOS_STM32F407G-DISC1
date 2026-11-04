@@ -1,0 +1,10 @@
+12:42:22 **** Incremental Build of configuration Debug for project 05_04_LED_Task_Notify_and_Suspend_AI ****
+make -j12 all 
+arm-none-eabi-size  05_04_LED_Task_Notify_and_Suspend_AI.elf 
+   text	   data	    bss	    dec	    hex	filename
+  29388	     28	 129684	 159100	  26d7c	05_04_LED_Task_Notify_and_Suspend_AI.elf
+Finished building: default.size.stdout
+ 
+
+12:42:23 Build Finished. 0 errors, 0 warnings. (took 359ms)
+

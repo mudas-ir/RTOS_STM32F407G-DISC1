@@ -346,7 +346,7 @@ static void Green_LED_handler(void* parameters)
 			vTaskSuspendAll();
 			next_Task_Handle = orange_LED_Handle;
 			xTaskResumeAll();
-			HAL_GPIO_WritePin(GPIOD, LED_ORANGE_PIN, GPIO_PIN_SET);
+			HAL_GPIO_WritePin(GPIOD, LED_GREEN_PIN, GPIO_PIN_SET);
 			SEGGER_SYSVIEW_PrintfTarget("Delete orange LED task");
 			vTaskDelete(NULL);
 		}
