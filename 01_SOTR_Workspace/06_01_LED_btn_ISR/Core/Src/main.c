@@ -54,7 +54,6 @@ static void MX_GPIO_Init(void);
 static void Green_LED_handler(void* parameters);
 static void Orange_LED_handler(void* parameters);
 static void Red_LED_handler(void* parameters);
-static void Button_handler(void* parameters);
 
 void SEGGER_UART_init(U32 baud);
 /* USER CODE END PFP */
@@ -64,7 +63,6 @@ void SEGGER_UART_init(U32 baud);
 TaskHandle_t green_LED_Handle;
 TaskHandle_t orange_LED_Handle;
 TaskHandle_t red_LED_Handle;
-TaskHandle_t button_Handle;
 
 TaskHandle_t volatile next_Task_Handle = NULL;
 /* USER CODE END 0 */
@@ -123,10 +121,6 @@ int main(void)
 
    configASSERT(status == pdPASS);
 
-   status = xTaskCreate(Button_handler, "Button_Task", 200, NULL, 4, &button_Handle);
-
-   configASSERT(status == pdPASS);
-
    //	Start the freeRTOS scheduler
    vTaskStartScheduler();
    //	If the control comes here, then the launch of the scheduler has failed due to insufficient memory in heap
@@ -135,7 +129,7 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  while (1)
+  while(1)
   {
     /* USER CODE END WHILE */
 
@@ -243,7 +237,7 @@ static void MX_GPIO_Init(void)
 
   /*Configure GPIO pin : B1_Pin */
   GPIO_InitStruct.Pin = B1_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
+  GPIO_InitStruct.Mode = GPIO_MODE_IT_FALLING;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(B1_GPIO_Port, &GPIO_InitStruct);
 
@@ -328,11 +322,36 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(MEMS_INT2_GPIO_Port, &GPIO_InitStruct);
 
+  /* EXTI interrupt init*/
+  HAL_NVIC_SetPriority(EXTI0_IRQn, 6, 0);
+  HAL_NVIC_EnableIRQ(EXTI0_IRQn);
+
 /* USER CODE BEGIN MX_GPIO_Init_2 */
 /* USER CODE END MX_GPIO_Init_2 */
 }
 
 /* USER CODE BEGIN 4 */
+void button_interrupt_handler(void)
+{
+	//	Enable either this
+#if 1
+	traceISR_ENTER();
+	xTaskNotifyFromISR(next_Task_Handle, 0, eNoAction, NULL);
+	traceISR_EXIT();
+#endif
+	//	or this. Enable the below code if you want to run the higher priority task as soon as the ISR ends.
+#if 0
+	BaseType_t pxHigherPriorityTaskWoken;
+	pxHigherPriorityTaskWoken = pdFALSE;
+
+	traceISR_ENTER();
+	xTaskNotifyFromISR(next_Task_Handle, 0, eNoAction, &pxHigherPriorityTaskWoken);
+	//	Once the ISR exits, the below macro makes the higher priority task which got unblocked to resume on the CPU.
+	portYIELD_FROM_ISR(pxHigherPriorityTaskWoken);
+	traceISR_EXIT();
+#endif
+}
+
 static void Green_LED_handler(void* parameters)
 {
 	BaseType_t  status;
@@ -343,11 +362,11 @@ static void Green_LED_handler(void* parameters)
 		status = xTaskNotifyWait(0,0,NULL,pdMS_TO_TICKS(1000));
 		if(status == pdTRUE)
 		{
-			vTaskSuspendAll();
+			portENTER_CRITICAL();
 			next_Task_Handle = orange_LED_Handle;
-			xTaskResumeAll();
 			HAL_GPIO_WritePin(GPIOD, LED_GREEN_PIN, GPIO_PIN_SET);
 			SEGGER_SYSVIEW_PrintfTarget("Delete orange LED task");
+			portEXIT_CRITICAL();
 			vTaskDelete(NULL);
 		}
 	}
@@ -363,11 +382,11 @@ static void Orange_LED_handler(void* parameters)
 		status = xTaskNotifyWait(0,0,NULL,pdMS_TO_TICKS(800));
 		if(status == pdTRUE)
 		{
-			vTaskSuspendAll();
+			portENTER_CRITICAL();
 			next_Task_Handle = red_LED_Handle;
-			xTaskResumeAll();
 			HAL_GPIO_WritePin(GPIOD, LED_ORANGE_PIN, GPIO_PIN_SET);
 			SEGGER_SYSVIEW_PrintfTarget("Delete orange LED task");
+			portEXIT_CRITICAL();
 			vTaskDelete(NULL);
 		}
 	}
@@ -383,31 +402,13 @@ static void Red_LED_handler(void* parameters)
 		status = xTaskNotifyWait(0,0,NULL,pdMS_TO_TICKS(400));
 		if(status == pdTRUE)
 		{
-			vTaskSuspendAll();
+			portENTER_CRITICAL();
 			next_Task_Handle = NULL;
-			xTaskResumeAll();
 			HAL_GPIO_WritePin(GPIOD, LED_RED_PIN,GPIO_PIN_SET);
 			SEGGER_SYSVIEW_PrintfTarget("Delete red LED task");
-			vTaskDelete(button_Handle);
+			portEXIT_CRITICAL();
 			vTaskDelete(NULL);
 		}
-	}
-}
-
-static void Button_handler(void* parameters)
-{
-	uint8_t btn_read = 0;
-	uint8_t prev_read = 0;
-	while(1)
-	{
-		btn_read = HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_0);
-		if(btn_read)
-		{
-			if(! prev_read)
-				xTaskNotify(next_Task_Handle,0,eNoAction);
-		}
-		prev_read = btn_read;
-		vTaskDelay(pdMS_TO_TICKS(10));
 	}
 }
 /* USER CODE END 4 */
