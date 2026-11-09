@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;05_01_LED_Task_Notify/04_01_Task_LED_Periodic_vTaskDelayUntil.ioc&apos; to &apos;05_01_LED_Task_Notify.ioc&apos;" description="Rename resource &apos;04_01_Task_LED_Periodic_vTaskDelayUntil.ioc&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="04_01_Task_LED_Periodic_vTaskDelayUntil.ioc" name="05_01_LED_Task_Notify.ioc" stamp="1793622460474" updateReferences="true"/>
-</session>

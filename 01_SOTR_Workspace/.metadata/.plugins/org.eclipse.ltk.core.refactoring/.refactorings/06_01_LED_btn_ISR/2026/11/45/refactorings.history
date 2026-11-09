@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;06_01_LED_btn_ISR/05_01_LED_Task_Notify.ioc&apos; to &apos;06_01_LED_btn_ISR.ioc&apos;" description="Rename resource &apos;05_01_LED_Task_Notify.ioc&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="05_01_LED_Task_Notify.ioc" name="06_01_LED_btn_ISR.ioc" stamp="1793790846558" updateReferences="true"/>
-</session>

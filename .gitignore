@@ -1,0 +1,17 @@
+# STM32CubeIDE / Eclipse workspace
+**/.metadata/
+
+# Build output
+**/Debug/
+**/Release/
+
+# Compiled files
+*.o
+*.elf
+*.hex
+*.bin
+*.map
+
+# Temporary files
+*.tmp
+*.log
