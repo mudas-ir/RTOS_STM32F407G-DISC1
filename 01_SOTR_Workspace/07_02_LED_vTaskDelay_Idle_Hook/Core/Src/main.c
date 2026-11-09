@@ -355,6 +355,11 @@ static void task3_handler(void* parameters)
 		vTaskDelay(pdMS_TO_TICKS(400));
 	}
 }
+
+void vApplicationIdleHook( void )
+{
+	HAL_PWR_EnterSLEEPMode(PWR_MAINREGULATOR_ON, PWR_SLEEPENTRY_WFI);
+}
 /* USER CODE END 4 */
 
 /**
