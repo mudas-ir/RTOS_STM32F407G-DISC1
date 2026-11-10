@@ -21,3 +21,6 @@
 
 # STM32CubeIDE generated language settings
 **/.settings/language.settings.xml
+
+# STM32CubeIDE project-specific preferences
+**/.settings/stm32cubeide.project.prefs
