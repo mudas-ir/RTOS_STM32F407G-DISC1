@@ -18,3 +18,6 @@
 # Temporary files
 *.log
 *.tmp
+
+# STM32CubeIDE generated language settings
+**/.settings/language.settings.xml
